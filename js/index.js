@@ -17,3 +17,14 @@ window.addEventListener("scroll", function () {
 
   prevScrollPos = currentScrollPos
 })
+
+// hamburger menu
+
+const burgerToggle = document.querySelector(".hamburger-menu input")
+
+const list = document.querySelector(".nav-list")
+
+burgerToggle.addEventListener("click", () => {
+  list.classList.toggle("hidden")
+  list.classList.toggle("show-nav")
+})
