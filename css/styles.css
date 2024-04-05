@@ -59,6 +59,8 @@ body {
   width: 0;
 }
 
+/* Media Query */
+
 @media (min-width: 1024px) {
   .hamburger-menu::before,
   .hamburger-menu::after,
@@ -74,10 +76,6 @@ body {
   margin-top: 1.5rem;
   text-align: center;
   width: 100vw;
-}
-
-main {
-  margin-top: 5.375rem;
 }
 
 .button-style {
