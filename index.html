@@ -14,12 +14,12 @@
     />
     <title>SaaS Page</title>
   </head>
-  <body class="w-full">
-    <header>
+  <body class="w-full h-full main-container">
+    <header class="">
       <nav
         class="navbar fixed top-0 w-full z-50 transition duration-500 ease-in-out transform translate-y-0 fixed md:flex md:justify-between py-7 text-xl bg-white"
       >
-        <div class="flex justify-between mx-7">
+        <div class="flex justify-between items-center mx-7">
           <span class="poppins-medium font-bold font-2xl">Habisure</span>
           <label
             class="w-fit hamburger-menu cursor-pointer md:hidden self-center"
@@ -28,17 +28,24 @@
           </label>
         </div>
         <ul
-          class="nav-list hidden mt-6 md:mt-0 md:w-fit h-fit md:flex mr-7 gap-6 font-semibold"
+          class="nav-list hidden mt-6 md:mt-0 md:w-fit h-fit md:flex md:items-center mr-7 gap-6 font-base"
         >
           <li><a href="#">Features</a></li>
           <li><a href="#">FAQ</a></li>
           <li><a href="#">Testimonials</a></li>
-          <li><a href="#">Sign up</a></li>
+          <li>
+            <button
+              class="button-style font-bold py-2 px-5 rounded inline-flex items-center"
+            >
+              <a href="#">Sign up</a>
+            </button>
+          </li>
         </ul>
       </nav>
     </header>
-    <main class="">
-      <section class="py-7 md:py-0">
+    <main class="mt-24 lg:mt-0">
+      <!-- Hero Section -->
+      <section class="my-32 md:my-0 py-7 md:py-0">
         <div class="md:h-screen flex items-center">
           <div
             class="container text-center mx-auto my-auto px-4 w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl"
@@ -53,78 +60,109 @@
             <button
               class="button-style font-bold py-3 px-6 rounded inline-flex items-center"
             >
-              <span>GET STARTED NOW</span
-              ><svg
-                fill="#fff"
-                height="800px"
-                width="800px"
-                version="1.1"
-                id="Layer_1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                viewBox="0 0 330 330"
-                xml:space="preserve"
+              <span>GET STARTED NOW</span>
+              <img
                 class="size-5 ml-2"
-              >
-                <path
-                  id="XMLID_27_"
-                  d="M15,180h263.787l-49.394,49.394c-5.858,5.857-5.858,15.355,0,21.213C232.322,253.535,236.161,255,240,255
-           s7.678-1.465,10.606-4.394l75-75c5.858-5.857,5.858-15.355,0-21.213l-75-75c-5.857-5.857-15.355-5.857-21.213,0
-           c-5.858,5.857-5.858,15.355,0,21.213L278.787,150H15c-8.284,0-15,6.716-15,15S6.716,180,15,180z"
-                />
-              </svg>
+                src="/public/svg/hero/arrow.svg"
+                alt="arrow_svg"
+              />
             </button>
           </div>
         </div>
       </section>
-      <section>
-        <div>
-          <h2>Fintech offers everything you need.</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
-          </p>
-        </div>
-        <div>
-          <div>
-            <h3>Unlimited Devices</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              nobis commodi quo, nisi culpa et ab vel delre
-            </p>
+
+      <!-- Features Section -->
+      <section class="my-32 pt-6 pb-7">
+        <div class="w-full mx-auto px-4">
+          <div class="sm:max-w-lg mx-auto">
+            <div class="mx-auto text-center">
+              <h2 class="text-4xl font-extrabold mb-4">
+                Fintech offers everything you need.
+              </h2>
+              <p class="font-medium text-base mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+                voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
+              </p>
+            </div>
+          </div>
+          <div
+            class="mt-5 w-fit text-center mx-auto md:grid md:grid-cols-2 md:grid-rows-2"
+          >
+            <div class="p-12">
+              <div class="features p-5 w-fit mx-auto mb-4">
+                <img
+                  class="size-10"
+                  src="/public/svg/features/city.svg"
+                  alt="lock_svg"
+                />
+              </div>
+              <h3 class="text-xl mb-4 font-bold">Bills Payments</h3>
+              <p class="font-medium mb-4 text-base">
+                Whether you need to pay for data, top up airtime, manage cable
+                subscriptions, handle utility payments, swap airtime for cash,
+                or purchase E-pins for education, Habisure has you covered.
+              </p>
+            </div>
+            <div class="p-12">
+              <div class="features p-5 w-fit mx-auto mb-4">
+                <img
+                  class="size-10"
+                  src="/public/svg/features/user.svg"
+                  alt="User_svg"
+                />
+              </div>
+              <h3 class="text-xl mb-4 font-bold">User Friendly</h3>
+              <p class="font-medium mb-4 text-base">
+                Our mission is to make your life easier. With Habisure, you can
+                say goodbye to long lines and multiple trips to different
+                locations. Our user-friendly mobile app and online platform
+                allow you to pay your bills anytime, anywhere.
+              </p>
+            </div>
+            <div class="p-12">
+              <div class="features p-5 w-fit mx-auto mb-4">
+                <img
+                  class="size-10"
+                  src="/public/svg/features/money-bag.svg"
+                  alt="breif_case_svg"
+                />
+              </div>
+              <h3 class="text-xl mb-4 font-bold">Money Flexibility</h3>
+              <p class="font-medium mb-4 text-base">
+                But convenience isn't our only priority. We also understand the
+                importance of saving you time and money. That's why we offer
+                competitive rates and fees, helping you keep more of your
+                hard-earned cash where it belongs - in your pocket.
+              </p>
+            </div>
+            <div class="p-12">
+              <div class="features p-5 w-fit mx-auto mb-4">
+                <img
+                  class="size-10"
+                  src="/public/svg/features/lock.svg"
+                  alt="lock_svg"
+                />
+              </div>
+              <h3 class="text-xl mb-4 font-bold">Safe & Secure</h3>
+              <p class="font-medium mb-4 text-base">
+                And with Habisure, you can rest easy knowing that your financial
+                information is safe and secure. We utilize state-of-the-art
+                security measures to protect your data, giving you peace of mind
+                with every transaction.
+              </p>
+            </div>
           </div>
           <div>
-            <h3>Flexibility</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              nobis commodi quo, nisi culpa et ab vel delre
-            </p>
+            <div>
+              <h3>Fintech is more than just a financial service</h3>
+              <p>
+                Lorem t amet consectetur adipisicing elit. Odio. Lorem, ipsum
+                dolor sit amet consectetur adipisicing elit. Deserunt!
+              </p>
+              <button>GET STARTED NOW</button>
+            </div>
+            <div><img src="" alt="Carousel" /></div>
           </div>
-          <div>
-            <h3>Easy To Use</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              nobis commodi quo, nisi culpa et ab vel delre
-            </p>
-          </div>
-          <div>
-            <h3>Available Globally</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-              nobis commodi quo, nisi culpa et ab vel delre
-            </p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <h3>Fintech is more than just a financial service</h3>
-            <p>
-              Lorem t amet consectetur adipisicing elit. Odio. Lorem, ipsum
-              dolor sit amet consectetur adipisicing elit. Deserunt!
-            </p>
-            <button>GET STARTED NOW</button>
-          </div>
-          <div><img src="" alt="Carousel" /></div>
         </div>
       </section>
       <section>
