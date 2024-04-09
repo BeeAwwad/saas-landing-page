@@ -6,6 +6,12 @@
     <script defer src="js/index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
+    <!------------------ REMIX ICON ------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!------------------ GOOGLE FONTS ------------------>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,81 +20,73 @@
     />
     <title>SaaS Page</title>
   </head>
-  <body class="w-full h-full main-container">
-    <header class="">
-      <nav
-        class="navbar fixed top-0 w-full z-50 transition duration-500 ease-in-out transform translate-y-0 fixed md:flex md:justify-between py-7 text-xl bg-white"
-      >
-        <div class="flex justify-between items-center mx-7">
-          <span class="poppins-medium font-bold font-2xl">Habisure</span>
-          <label
-            class="w-fit hamburger-menu cursor-pointer md:hidden self-center"
-          >
-            <input type="checkbox" />
-          </label>
+  <body class="main-container">
+     <!------------------ HEADER ------------------>
+     <header class="header" id="header">
+      <nav class="flex justify-between items-center w-11/12 mx-auto py-3">
+        <div class="flex items-center"><img class="w-7" src="/public/svg/navigation/logo.svg" alt="logo"><span class="ml-3 text-xl font-semibold habisure">Habisure</span></div>
+        <div class="drop-down absolute md:static bg-white left-0 flex items-center px-5" id="drop-menu">
+          <ul class="flex md:flex-row flex-col md:items-center gap-8 md:gap-4 text-lg font-medium">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
         </div>
-        <ul
-          class="nav-list hidden mt-6 md:mt-0 md:w-fit h-fit md:flex md:items-center mr-7 gap-6 font-base"
-        >
-          <li><a href="#">Features</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Testimonials</a></li>
-          <li>
-            <button
-              class="button-style font-bold py-2 px-5 rounded inline-flex items-center"
-            >
-              <a href="#">Sign up</a>
-            </button>
-          </li>
-        </ul>
+        <div class="flex items-center md:static">
+          <button class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit">Sign in</button>
+          <div class="nav__toggle relative size-8 ml-3" id="nav-toggle">
+            <i class="ri-menu-line nav__burger text-4xl md:hidden"></i>
+            <i class="ri-close-fill nav__close text-4xl md:hidden"></i>
+          </div>
+        </div>
       </nav>
-    </header>
-    <main class="mt-24 lg:mt-0">
+      </header>
+
+     <!------------------ MAIN CONTENT ------------------>
+    <main class="pt-16 lg:pt-0">
       <!-- Hero Section -->
       <section class="my-32 md:my-0 py-7 md:py-0">
         <div class="md:h-screen flex items-center">
           <div
-            class="container text-center mx-auto my-auto px-4 w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl"
+            class="text-center mx-auto my-auto px-4 w-full sm:max-w-lg md:max-w-xl lg:max-w-2xl"
           >
             <h1 class="font-extrabold text-5xl my-4 uppercase">
-              Streamline Your Money Flows with Ease
+              Seameless Payments With
+              <span class="habisure">Habisure!</span>
             </h1>
             <p class="font-medium text-base py-3 mb-4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
+              Our mission is clear: to save you time and money. With competitive
+              rates and a secure platform, you can manage your finances
+              hassle-free, anytime, anywhere.
             </p>
             <button
               class="button-style font-bold py-3 px-6 rounded inline-flex items-center"
             >
               <span>GET STARTED NOW</span>
-              <img
-                class="size-5 ml-2"
-                src="/public/svg/hero/arrow.svg"
-                alt="arrow_svg"
-              />
+              <i class="ri-arrow-right-line text-xl ml-2"></i>
             </button>
-          </div>
         </div>
       </section>
 
-      <!-- Features Section -->
+      <!------------------ Features Section ------------------>
       <section class="my-32 pt-6 pb-7">
         <div class="w-full mx-auto px-4">
-          <div class="sm:max-w-lg mx-auto">
+          <div class="sm:max-w-lg mx-auto mb-40">
             <div class="mx-auto text-center">
-              <h2 class="text-4xl font-extrabold mb-4">
+              <h2 class="text-4xl font-extrabold mb-6">
                 Fintech offers everything you need.
               </h2>
-              <p class="font-medium text-base mb-4">
+              <p class="font-medium text-base mb-6">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
                 voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
               </p>
             </div>
           </div>
           <div
-            class="mt-5 w-fit text-center mx-auto md:grid md:grid-cols-2 md:grid-rows-2"
+            class="features-container mt-5 w-fit text-center mx-auto grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 mb-40"
           >
-            <div class="p-12">
+            <div class="feature-container rounded-2xl p-12">
               <div class="features p-5 w-fit mx-auto mb-4">
                 <img
                   class="size-10"
@@ -96,14 +94,14 @@
                   alt="lock_svg"
                 />
               </div>
-              <h3 class="text-xl mb-4 font-bold">Bills Payments</h3>
+              <h4 class="text-xl mb-4 font-bold">Bills Payments</h4>
               <p class="font-medium mb-4 text-base">
                 Whether you need to pay for data, top up airtime, manage cable
                 subscriptions, handle utility payments, swap airtime for cash,
                 or purchase E-pins for education, Habisure has you covered.
               </p>
             </div>
-            <div class="p-12">
+            <div class="feature-container rounded-2xl p-12">
               <div class="features p-5 w-fit mx-auto mb-4">
                 <img
                   class="size-10"
@@ -111,7 +109,7 @@
                   alt="User_svg"
                 />
               </div>
-              <h3 class="text-xl mb-4 font-bold">User Friendly</h3>
+              <h4 class="text-xl mb-4 font-bold">User Friendly</h4>
               <p class="font-medium mb-4 text-base">
                 Our mission is to make your life easier. With Habisure, you can
                 say goodbye to long lines and multiple trips to different
@@ -119,7 +117,7 @@
                 allow you to pay your bills anytime, anywhere.
               </p>
             </div>
-            <div class="p-12">
+            <div class="feature-container rounded-2xl p-12">
               <div class="features p-5 w-fit mx-auto mb-4">
                 <img
                   class="size-10"
@@ -127,7 +125,7 @@
                   alt="breif_case_svg"
                 />
               </div>
-              <h3 class="text-xl mb-4 font-bold">Money Flexibility</h3>
+              <h4 class="text-xl mb-4 font-bold">Money Flexibility</h4>
               <p class="font-medium mb-4 text-base">
                 But convenience isn't our only priority. We also understand the
                 importance of saving you time and money. That's why we offer
@@ -135,7 +133,7 @@
                 hard-earned cash where it belongs - in your pocket.
               </p>
             </div>
-            <div class="p-12">
+            <div class="feature-container rounded-2xl p-12">
               <div class="features p-5 w-fit mx-auto mb-4">
                 <img
                   class="size-10"
@@ -143,7 +141,7 @@
                   alt="lock_svg"
                 />
               </div>
-              <h3 class="text-xl mb-4 font-bold">Safe & Secure</h3>
+              <h4 class="text-xl mb-4 font-bold">Safe & Secure</h4>
               <p class="font-medium mb-4 text-base">
                 And with Habisure, you can rest easy knowing that your financial
                 information is safe and secure. We utilize state-of-the-art
@@ -152,14 +150,25 @@
               </p>
             </div>
           </div>
-          <div>
-            <div>
-              <h3>Fintech is more than just a financial service</h3>
-              <p>
+          <div class="sm:max-w-lg mx-auto mb-10">
+            <div class="mx-auto text-center">
+              <h3 class="text-4xl font-extrabold mb-6">
+                Fintech is more than just a financial service
+              </h3>
+              <p class="font-medium text-base mb-6">
                 Lorem t amet consectetur adipisicing elit. Odio. Lorem, ipsum
                 dolor sit amet consectetur adipisicing elit. Deserunt!
               </p>
-              <button>GET STARTED NOW</button>
+              <button
+                class="button-style font-bold py-3 px-6 rounded inline-flex items-center"
+              >
+                <span>GET STARTED NOW</span>
+                <img
+                  class="size-5 ml-2"
+                  src="/public/svg/hero/arrow.svg"
+                  alt="arrow_svg"
+                />
+              </button>
             </div>
             <div><img src="" alt="Carousel" /></div>
           </div>

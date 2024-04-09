@@ -18,13 +18,15 @@ window.addEventListener("scroll", function () {
   prevScrollPos = currentScrollPos
 })
 
-// hamburger menu
+// toggle menu function
 
-const burgerToggle = document.querySelector(".hamburger-menu input")
+const toggleMenu = (toggleId, navId) => {
+  const toggle = document.querySelector(toggleId)
+  const nav = document.querySelector(navId)
+  toggle.addEventListener("click", () => {
+    nav.classList.toggle("show-menu")
+    toggle.classList.toggle("show-icon")
+  })
+}
 
-const list = document.querySelector(".nav-list")
-
-burgerToggle.addEventListener("click", () => {
-  list.classList.toggle("hidden")
-  list.classList.toggle("show-nav")
-})
+toggleMenu("#nav-toggle", "#drop-menu")

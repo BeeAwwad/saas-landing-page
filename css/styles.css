@@ -2,98 +2,68 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/*=============== VARIABLES CSS ===============*/
 :root {
-  --bar-width: 40px;
-  --bar-height: 6px;
-  --hamburger-gap: 6px;
-  --background: white;
-  --foreground: black;
-  --animation-timing: 200ms ease-in-out;
-  --hamburger-height: calc(
-    (var(--bar-height) * 3) + (var(--hamburger-gap) * 2)
-  );
-  --x-width: calc(var(--hamburger-height) * 1.41421356237);
+  --Habisure: #f50057;
+  --ButtonHover: #ff346c;
 }
 
-.hamburger-menu {
-  display: flex;
-  flex-direction: column;
-  gap: var(--hamburger-gap);
-  z-index: 9999;
-}
-
-.hamburger-menu::before,
-.hamburger-menu::after,
-.hamburger-menu input {
-  content: "";
-  width: var(--bar-width);
-  height: var(--bar-height);
-  background-color: var(--foreground);
-  border-radius: 999px;
-  transform-origin: left center;
-  transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing);
-}
-
-.hamburger-menu input {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: none;
-  pointer-events: none;
-}
-
-.hamburger-menu:has(input:checked)::before {
-  rotate: 45deg;
-  width: var(--x-width);
-  translate: 0 calc(var(--bar-height) / -1);
-}
-
-.hamburger-menu:has(input:checked)::after {
-  rotate: -45deg;
-  width: var(--x-width);
-}
-
-.hamburger-menu input:checked {
-  opacity: 0;
-  width: 0;
-}
-
-/* Media Query */
-
-@media (min-width: 1024px) {
-  .hamburger-menu::before,
-  .hamburger-menu::after,
-  .hamburger-menu input {
-    display: none;
-  }
-}
-
-.show-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-  text-align: center;
-  width: 100vw;
+.habisure {
+  color: var(--Habisure);
 }
 
 .button-style {
-  background-color: #f50057;
+  background-color: var(--Habisure);
   color: white;
 }
 
-.main-container {
-  max-width: 1440px;
-  margin: 0 auto;
+.button-style:hover {
+  background-color: var(--ButtonHover);
 }
 
-.navbar {
-  max-width: 1440px;
-  margin: 0 auto;
+.drop-down {
+  height: calc(50vh - 3.5rem);
+  overflow: auto;
+  width: 100%;
+  top: -100%;
+  opacity: 0;
+  transition: top 500ms ease-in, opacity 500ms ease-in;
 }
 
-.features {
-  background-color: rgba(245, 0, 87, 0.1);
-  border-radius: 9999px;
+.show-menu {
+  top: 4rem;
+  opacity: 1;
+  pointer-events: initial;
+}
+
+@media (min-width: 768px) {
+  .drop-down {
+    height: fit-content;
+    width: auto;
+  }
+}
+
+.nav__burger,
+.nav__close {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: opacity 0.1s, transform 0.5s;
+}
+
+.nav__close {
+  opacity: 0;
+}
+
+.show-icon .nav__burger {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.show-icon .nav__close {
+  opacity: 1;
+  transform: rotate(90deg);
 }
