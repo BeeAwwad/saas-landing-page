@@ -21,12 +21,26 @@
     <title>SaaS Page</title>
   </head>
   <body class="main-container">
-     <!------------------ HEADER ------------------>
-     <header class="header" id="header">
+    <!------------------ HEADER ------------------>
+    <header
+      class="header navbar fixed top-0 w-full z-50 transition duration-500 ease-in-out transform translate-y-0 bg-white"
+      id="header"
+    >
       <nav class="flex justify-between items-center w-11/12 mx-auto py-3">
-        <div class="flex items-center"><img class="w-7" src="/public/svg/navigation/logo.svg" alt="logo"><span class="ml-3 text-xl font-semibold habisure">Habisure</span></div>
-        <div class="drop-down absolute md:static bg-white left-0 flex items-center px-5" id="drop-menu">
-          <ul class="flex md:flex-row flex-col md:items-center gap-8 md:gap-4 text-lg font-medium">
+        <div class="flex items-center">
+          <img
+            class="w-7"
+            src="/public/svg/navigation/logo.svg"
+            alt="logo"
+          /><span class="ml-3 text-xl font-semibold habisure">Habisure</span>
+        </div>
+        <div
+          class="drop-down absolute md:static md:opacity-100 bg-white left-0 flex items-center justify-center px-5"
+          id="drop-menu"
+        >
+          <ul
+            class="flex flex-col md:flex-row items-center gap-8 md:gap-4 text-lg font-medium"
+          >
             <li><a href="#">Home</a></li>
             <li><a href="#">Features</a></li>
             <li><a href="#">FAQ</a></li>
@@ -34,18 +48,25 @@
           </ul>
         </div>
         <div class="flex items-center md:static">
-          <button class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit">Sign in</button>
-          <div class="nav__toggle relative size-8 ml-3" id="nav-toggle">
+          <button
+            class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit"
+          >
+            Sign in
+          </button>
+          <div
+            class="nav__toggle relative size-8 ml-3 md:hidden"
+            id="nav-toggle"
+          >
             <i class="ri-menu-line nav__burger text-4xl md:hidden"></i>
             <i class="ri-close-fill nav__close text-4xl md:hidden"></i>
           </div>
         </div>
       </nav>
-      </header>
+    </header>
 
-     <!------------------ MAIN CONTENT ------------------>
+    <!------------------ MAIN CONTENT ------------------>
     <main class="pt-16 lg:pt-0">
-      <!-- Hero Section -->
+      <!------------------ Hero Section ------------------>
       <section class="my-32 md:my-0 py-7 md:py-0">
         <div class="md:h-screen flex items-center">
           <div
@@ -66,6 +87,7 @@
               <span>GET STARTED NOW</span>
               <i class="ri-arrow-right-line text-xl ml-2"></i>
             </button>
+          </div>
         </div>
       </section>
 
@@ -150,10 +172,13 @@
               </p>
             </div>
           </div>
-          <div class="sm:max-w-lg mx-auto mb-10">
-            <div class="mx-auto text-center">
-              <h3 class="text-4xl font-extrabold mb-6">
-                Fintech is more than just a financial service
+          <div class="sm:max-w-lg md:max-w-5xl mx-auto mb-10 md:flex">
+            <div
+              class="mx-auto text-center flex flex-col items-center md:my-auto md:mr-10 md:w-1/2"
+            >
+              <h3 class="text-4xl font-extrabold mb-6 max-w-sm">
+                <span class="habisure">Habisure</span> is more than just a
+                financial service
               </h3>
               <p class="font-medium text-base mb-6">
                 Lorem t amet consectetur adipisicing elit. Odio. Lorem, ipsum
@@ -163,14 +188,61 @@
                 class="button-style font-bold py-3 px-6 rounded inline-flex items-center"
               >
                 <span>GET STARTED NOW</span>
-                <img
-                  class="size-5 ml-2"
-                  src="/public/svg/hero/arrow.svg"
-                  alt="arrow_svg"
-                />
+                <i class="ri-arrow-right-line text-xl ml-2"></i>
               </button>
             </div>
-            <div><img src="" alt="Carousel" /></div>
+            <div
+              class="slide-container overflow-hidden rounded-lg mx-auto mt-10 md:w-1/2"
+            >
+              <div class="my__slides fade overflow-hidden rounded-lg">
+                <img
+                  id="slide-0"
+                  src="/public/images/features/image-one.png"
+                  alt="image of a lady"
+                />
+              </div>
+
+              <div class="my__slides fade overflow-hidden rounded-lg">
+                <img
+                  id="slide-1"
+                  src="/public/images/features/image-two.png"
+                  alt="image of man"
+                />
+              </div>
+
+              <div class="my__slides fade overflow-hidden rounded-lg">
+                <img
+                  id="slide-2"
+                  src="/public/images/features/image-three.png"
+                  alt="image of man"
+                />
+              </div>
+
+              <a
+                class="prev absolute text-white cursor-pointer top-1/2 text-lg font-bold p-5 w-auto"
+                onclick="plusSlides(-1)"
+                >&#10094;</a
+              >
+              <a
+                class="next absolute text-white cursor-pointer top-1/2 text-lg font-bold p-5 w-auto right-0"
+                onclick="plusSlides(1)"
+                >&#10095;</a
+              >
+              <div class="text-center mt-8">
+                <span
+                  class="dot cursor-pointer size-4 mx-0.5 rounded-full inline-block"
+                  onclick="currentSlide(1)"
+                ></span>
+                <span
+                  class="dot cursor-pointer size-4 mx-0.5 rounded-full inline-block"
+                  onclick="currentSlide(2)"
+                ></span>
+                <span
+                  class="dot cursor-pointer size-4 mx-0.5 rounded-full inline-block"
+                  onclick="currentSlide(3)"
+                ></span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

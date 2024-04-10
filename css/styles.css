@@ -6,6 +6,7 @@ body {
 :root {
   --Habisure: #f50057;
   --ButtonHover: #ff346c;
+  --HabisureOpacity: rgba(255, 23, 68, 0.1);
 }
 
 .habisure {
@@ -66,4 +67,76 @@ body {
 .show-icon .nav__close {
   opacity: 1;
   transform: rotate(90deg);
+}
+
+.drop-down ul li a {
+  position: relative;
+}
+
+.drop-down ul li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0%;
+  background-color: var(--Habisure);
+  position: absolute;
+  bottom: 0;
+  transition: all ease-in-out 250ms;
+}
+
+.drop-down ul li a:hover:after {
+  width: 100%;
+}
+
+/* ---------------- Features Styles ---------------- */
+
+.features {
+  background-color: var(--HabisureOpacity);
+  border-radius: 999px;
+}
+
+/* ---------------- Slider Styles ---------------- */
+.my__slides {
+  display: none;
+}
+
+.prev,
+.next {
+  margin-top: -22px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+  background-color: #bbb;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
