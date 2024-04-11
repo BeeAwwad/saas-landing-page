@@ -49,7 +49,7 @@
         </div>
         <div class="flex items-center md:static">
           <button
-            class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit"
+            class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
           >
             Sign in
           </button>
@@ -82,7 +82,7 @@
               hassle-free, anytime, anywhere.
             </p>
             <button
-              class="button-style font-bold py-3 px-6 rounded inline-flex items-center"
+              class="button-style font-bold py-3 px-6 rounded inline-flex items-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
             >
               <span>GET STARTED NOW</span>
               <i class="ri-arrow-right-line text-xl ml-2"></i>
@@ -186,14 +186,14 @@
                 dolor sit amet consectetur adipisicing elit. Deserunt!
               </p>
               <button
-                class="button-style font-bold py-3 px-6 rounded inline-flex items-center w-fit"
+                class="button-style font-bold py-3 px-6 rounded inline-flex items-center w-fit duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
               >
                 <span>GET STARTED NOW</span>
                 <i class="ri-arrow-right-line text-xl ml-2"></i>
               </button>
             </div>
             <div
-              class="slide-container overflow-hidden rounded-lg mx-auto mt-10 md:w-1/2"
+              class="slide-container relative overflow-hidden rounded-lg mx-auto mt-10 md:w-1/2"
             >
               <div class="my__slides fade overflow-hidden rounded-lg">
                 <img
@@ -267,7 +267,7 @@
               <i class="ri-arrow-down-s-line text-md font-semibold mt-0.5"></i>
             </div>
             <div class="answer">
-              <p class="text-base font-md mt-5">
+              <p class="text-base font-medium mt-5">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
                 nobis commodi quo, nisi culpa et ab vel delre
               </p>
@@ -290,7 +290,9 @@
           <div class="faq cursor-pointer mt-0.5 py-5">
             <div class="question flex justify-between items-center">
               <h4 class="text-lg font-semibold">How does Habisure work ?</h4>
-              <i class="ri-arrow-down-s-line text-md font-semibold mt-0.5"></i>
+              <i
+                class="ri-arrow-down-s-line text-base font-semibold mt-0.5"
+              ></i>
             </div>
             <div class="answer">
               <p class="text-base font-md mt-5">
@@ -303,7 +305,9 @@
           <div class="faq cursor-pointer mt-0.5 py-5">
             <div class="question flex justify-between items-center">
               <h4 class="text-lg font-semibold">How does Habisure work ?</h4>
-              <i class="ri-arrow-down-s-line text-md font-semibold mt-0.5"></i>
+              <i
+                class="ri-arrow-down-s-line text-base font-semibold mt-0.5"
+              ></i>
             </div>
             <div class="answer">
               <p class="text-base font-md mt-5">
@@ -314,17 +318,45 @@
           </div>
         </div>
       </section>
+
+      <!------------------ NEWSLETTER ------------------>
+      <section class="third__color">
+        <div
+          class="newsletter_container sm:max-w-xl md:max-w-5xl mx-auto flex flex-col items-center py-3"
+        >
+          <div class="py-12 px-4 lg:py-20">
+            <h2 class="text-4xl text-white font-extrabold text-center mb-5">
+              Stay up to date
+            </h2>
+            <p
+              class="text-center text-base text-gray-400 font-medium mb-6 max-w-3xl mx-auto"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
+            </p>
+            <form
+              action="#"
+              class="flex flex-col md:flex-row md:justify-center w-full md:max-w-md md:mx-auto"
+            >
+              <label for="email"
+                ><input
+                  type="email"
+                  autocomplete="email"
+                  class="mb-3 md:mb-0 px-4 py-3 rounded-r-lg rounded-l-lg md:rounded-r-none border-2 border-gray-300 focus:outline-none focus:border-[#f50057] w-full"
+                  placeholder="Your email address"
+              /></label>
+              <button
+                type="submit"
+                class="button-style font-bold py-3 px-6 rounded-l-lg rounded-r-lg md:rounded-l-none duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
+              >
+                GET UPDATES
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-      <div>
-        <h2>Stay up to date</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-          voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
-        </p>
-        <input type="email" placeholder="Enter your email" />
-        <button>GET UPDATES</button>
-      </div>
       <div>
         <span>FinTech</span>
         <p>2024 March, all rights reserved</p>
