@@ -89,7 +89,9 @@ body {
 }
 
 /* ---------------- Features Styles ---------------- */
-
+.feature-container {
+  background-color: #fcfcfc;
+}
 .features {
   background-color: var(--HabisureOpacity);
   border-radius: 999px;
@@ -122,14 +124,14 @@ body {
   transition: background-color 0.6s ease;
 }
 
-.active,
+.image__active,
 .dot:hover {
   background-color: #717171;
 }
 
 .fade {
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1500ms;
 }
 
 @keyframes fade {
@@ -138,5 +140,41 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+/* ---------------- FAQ Styles ---------------- */
+
+.faq {
+  border-bottom: 2px solid #e7eaea;
+}
+
+.faq h4 {
+  transition: color 250ms ease-in;
+}
+
+.faq i {
+  transition: transform 400ms ease-in, color 250ms ease-in;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 500ms ease;
+}
+
+.faq.active__faq .answer {
+  max-height: 300px;
+  animation: fade-up 500ms ease-in;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

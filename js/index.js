@@ -60,13 +60,47 @@ function showSlides(n) {
     slides[i].style.display = "none"
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "")
+    dots[i].className = dots[i].className.replace(" image__active", "")
   }
   slides[slideIndex - 1].style.display = "block"
-  dots[slideIndex - 1].className += " active"
+  dots[slideIndex - 1].className += " image__active"
 }
 
 // Automatic Slides
 setInterval(() => {
   plusSlides(1)
 }, 5000)
+
+// FAQ Accordion
+
+const faqs = document.querySelectorAll(".faq")
+
+faqs.forEach((faq) => {
+  faq.addEventListener("click", () => {
+    faqs.forEach((otherFaq) => {
+      if (otherFaq !== faq && otherFaq.classList.contains("active__faq")) {
+        otherFaq.classList.remove("active__faq")
+        const toggleArrow = otherFaq.querySelector("i")
+        const heading = otherFaq.querySelector("h4")
+        toggleArrow.style.transform = "rotate(0deg)"
+        toggleArrow.style.color = ""
+        heading.style.color = ""
+      }
+    })
+
+    faq.classList.toggle("active__faq")
+
+    const toggleArrow = faq.querySelector("i")
+    const heading = faq.querySelector("h4")
+
+    if (faq.classList.contains("active__faq")) {
+      toggleArrow.style.transform = "rotate(180deg)"
+      toggleArrow.style.color = "#ff346c"
+      heading.style.color = "#ff346c"
+    } else {
+      toggleArrow.style.transform = "rotate(0deg)"
+      toggleArrow.style.color = ""
+      heading.style.color = ""
+    }
+  })
+})
