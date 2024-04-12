@@ -183,3 +183,27 @@ body {
     transform: translateY(0);
   }
 }
+
+/* ---------------- Footer Styles ---------------- */
+
+.footer__brand,
+.footer__links,
+.footer__social__links,
+.footer__copyright {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .site__footer__inner {
+    justify-content: space-between;
+  }
+
+  .footer__brand,
+  .footer__links,
+  .footer__social__links,
+  .footer__copyright {
+    flex: 1 1 50%;
+    max-width: 50%;
+  }
+}
