@@ -8,10 +8,19 @@ body {
   --ButtonHover: #ff346c;
   --HabisureOpacity: rgba(255, 23, 68, 0.1);
   --ThirdColor: #001233;
+  --TextColor: #979797;
 }
 
 .habisure {
   color: var(--Habisure);
+}
+
+.text__color {
+  color: var(--TextColor);
+}
+
+.border__color {
+  border-color: var(--TextColor);
 }
 
 .third__color {
@@ -206,4 +215,44 @@ body {
     flex: 1 1 50%;
     max-width: 50%;
   }
+}
+
+/* ---------------- Input Styles ---------------- */
+
+.normal__input__wrap {
+  border: 1px solid #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px #0000001a;
+}
+
+/* ----------------- Sign-in page clases --------------- */
+
+.eye-icon-container {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#showPassword,
+#hidePassword {
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  inset: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: opacity 0.1s, transform 0.5s;
+}
+
+#hidePassword {
+  opacity: 0;
+}
+
+.welcome {
+  background-image: url(../public/images/features/image-one.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }

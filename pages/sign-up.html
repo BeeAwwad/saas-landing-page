@@ -3,7 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../js/index.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!------------------ REMIX ICON ------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!------------------ GOOGLE FONTS ------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Sign up page</title>
   </head>
-  <body></body>
+  <body>
+    <header
+      class="header navbar fixed top-0 w-full z-50 transition duration-500 ease-in-out transform translate-y-0 bg-white shadow-md"
+      id="header"
+    >
+      <nav class="flex justify-between items-center w-11/12 mx-auto py-3">
+        <div class="flex items-center">
+          <img
+            class="w-7 cursor-pointer"
+            src="/public/svg/navigation/logo.svg"
+            alt="logo"
+          /><a
+            href="#"
+            class="ml-3 text-xl font-semibold cursor-pointer habisure"
+            >Habisure</a
+          >
+        </div>
+        <div
+          class="drop-down absolute md:static md:opacity-100 bg-white left-0 flex items-center justify-center px-5"
+          id="drop-menu"
+        >
+          <ul
+            class="flex flex-col md:flex-row items-center gap-8 md:gap-4 text-lg font-medium"
+          >
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Testimonials</a></li>
+          </ul>
+        </div>
+        <div class="flex items-center md:static">
+          <button
+            class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
+          >
+            Sign in
+          </button>
+          <div
+            class="nav__toggle relative size-8 ml-3 md:hidden"
+            id="nav-toggle"
+          >
+            <i class="ri-menu-line nav__burger text-4xl md:hidden"></i>
+            <i class="ri-close-fill nav__close text-4xl md:hidden"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+  </body>
 </html>
