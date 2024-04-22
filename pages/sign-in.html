@@ -60,6 +60,7 @@
                 type="email"
                 name="email"
                 id="email"
+                autocomplete="email"
                 class="py-3 px-4 block w-full text-gray-700 border-2 normal__input__wrap rounded-lg focus:outline-none focus:ring-gray-200 focus:border-gray-300"
                 placeholder="email@example.com"
                 required
@@ -72,6 +73,7 @@
                   type="password"
                   name="password"
                   id="password"
+                  autocomplete="current-password"
                   class="py-3 px-4 block w-full text-gray-700 border-2 normal__input__wrap rounded-lg focus:outline-none focus:ring-gray-200 focus:border-gray-300"
                   placeholder="Your secure password"
                   required
@@ -79,9 +81,9 @@
                 <div
                   class="absolute flex items-center right-8 eye-icon-container w-fit"
                 >
-                  <i class="ri-eye-2-line cursor-pointer" id="showPassword"></i>
+                  <i class="ri-eye-line cursor-pointer" id="showPassword"></i>
                   <i
-                    class="ri-eye-close-line cursor-pointer"
+                    class="ri-eye-off-line cursor-pointer"
                     id="hidePassword"
                   ></i>
                 </div>
@@ -127,10 +129,17 @@
           </form>
 
           <div
-            class="welcome hidden md:block md:w-1/2 md:rounded-tr-2xl md:rounded-br-2xl"
+            class="hidden md:block md:w-1/2 md:rounded-tr-2xl md:rounded-br-2xl overflow-hidden"
           >
-            <div class="flex justify-center items-center h-full">
-              <h2 class="text-5xl font-bold text-center habisure">
+            <div class="blur__div blur__one h-full relative">
+              <img
+                class="object-cover object-center h-full w-full"
+                src="../public/images/features/image-one.png"
+                alt="lady says Welcome Back"
+              />
+              <h2
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-5xl font-bold habisure text-center"
+              >
                 <span>Welcome Back!</span>
               </h2>
             </div>

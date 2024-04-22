@@ -157,6 +157,62 @@ body {
   }
 }
 
+.blur__div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  animation: pulse 2500ms infinite;
+}
+
+.blur__div.loaded::before {
+  content: none;
+  animation: none;
+}
+@keyframes pulse {
+  0% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0);
+  }
+}
+.blur__div {
+  position: relative;
+}
+
+.blur__div.loaded > img {
+  opacity: 1;
+  transition: none;
+}
+
+.blur__div > img {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.blur__one,
+.blur__two,
+.blur__three {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blur__one {
+  background-image: url(../public/images/features/image-one-small.png);
+}
+
+.blur__two {
+  background-image: url(../public/images/features/image-two-small.png);
+}
+
+.blur__three {
+  background-image: url(../public/images/features/image-three-small.png);
+}
+
 /* ---------------- FAQ Styles ---------------- */
 
 .faq {
@@ -248,11 +304,4 @@ body {
 
 #hidePassword {
   opacity: 0;
-}
-
-.welcome {
-  background-image: url(../public/images/features/image-one.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }

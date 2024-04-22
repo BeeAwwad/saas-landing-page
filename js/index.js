@@ -71,6 +71,35 @@ setInterval(() => {
   plusSlides(1)
 }, 5000)
 
+// Only show images in carousel when image is downloaded completely
+
+const blurDiv = document.querySelector(".blur__div")
+console.log("🚀 ~ blurDiv:", blurDiv)
+const img = blurDiv.querySelector("img")
+
+function loaded() {
+  blurDiv.classList.add("loaded")
+}
+
+if (img.complete) {
+  loaded()
+} else {
+  img.addEventListener("load", loaded)
+}
+
+const blurDivs = document.querySelectorAll(".blur__div")
+blurDivs.forEach((div) => {
+  const img = div.querySelector("img")
+  function loaded() {
+    div.classList.add("loaded")
+  }
+  if (img.complete) {
+    loaded()
+  } else {
+    img.addEventListener("load", loaded)
+  }
+})
+
 // FAQ Accordion
 
 const faqs = document.querySelectorAll(".faq")
