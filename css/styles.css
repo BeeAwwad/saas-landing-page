@@ -283,16 +283,8 @@ body {
 
 /* ----------------- Sign-in page clases --------------- */
 
-.eye-icon-container {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-#showPassword,
-#hidePassword {
+.opened__eye,
+.closed__eye {
   position: absolute;
   width: max-content;
   height: max-content;
@@ -302,6 +294,14 @@ body {
   transition: opacity 0.1s, transform 0.5s;
 }
 
-#hidePassword {
+.opened__eye {
   opacity: 0;
+}
+
+.show__eye .closed__eye {
+  opacity: 0;
+}
+
+.show__eye .opened__eye {
+  opacity: 1;
 }

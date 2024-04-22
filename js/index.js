@@ -133,30 +133,3 @@ faqs.forEach((faq) => {
     }
   })
 })
-
-// Show Password
-
-const passwordInput = document.getElementById("password")
-const showPasswordIcon = document.getElementById("showPassword")
-const hidePasswordIcon = document.getElementById("hidePassword")
-
-showPasswordIcon.addEventListener("click", function () {
-  passwordInput.type = "text"
-  showPasswordIcon.classList.add("hidden")
-  hidePasswordIcon.classList.remove("hidden")
-})
-
-hidePasswordIcon.addEventListener("click", function () {
-  passwordInput.type = "password"
-  showPasswordIcon.classList.remove("hidden")
-  hidePasswordIcon.classList.add("hidden")
-})
-
-// Show Icon
-
-const eyeIconContainer = document.querySelector(".eye-icon-container")
-
-eyeIconContainer.addEventListener("click", function () {
-  showPasswordIcon.classList.toggle("hidden")
-  hidePasswordIcon.classList.toggle("hidden")
-})
