@@ -1,4 +1,4 @@
-// Show Password
+// Show Password and Icon
 
 const eyeIcon = document.querySelector("#eye-icon")
 console.log("🚀 ~ eyeIcon:", eyeIcon)
@@ -13,8 +13,6 @@ eyeIcon.onclick = () => {
     eyeIcon.classList.toggle("show__eye")
   }
 }
-
-// Show Icon
 
 // Lazy load welcome back image
 
