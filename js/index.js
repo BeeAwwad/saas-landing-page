@@ -74,7 +74,6 @@ setInterval(() => {
 // Only show images in carousel when image is downloaded completely
 
 const blurDiv = document.querySelector(".blur__div")
-console.log("🚀 ~ blurDiv:", blurDiv)
 const img = blurDiv.querySelector("img")
 
 function loaded() {
@@ -130,6 +129,28 @@ faqs.forEach((faq) => {
       toggleArrow.style.transform = "rotate(0deg)"
       toggleArrow.style.color = ""
       heading.style.color = ""
+    }
+  })
+})
+
+// WhatsApp appears and disappears
+
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappIcon = document.getElementById("whatsapp-icon")
+
+  window.addEventListener("scroll", function () {
+    // Show WhatsApp icon when scrolling down 100px
+    if (this.window.scrollY > 100) {
+      whatsappIcon.classList.remove("hidden")
+      whatsappIcon.classList.add("slide-in")
+    } else if (this.window.scrollY < 100) {
+      // Hide WhatsApp icon when scrolling up
+      whatsappIcon.classList.add("slide-out")
+      setTimeout(function () {
+        whatsappIcon.classList.add("hidden")
+        whatsappIcon.classList.remove("slide-in")
+        whatsappIcon.classList.remove("slide-out")
+      }, 500)
     }
   })
 })
