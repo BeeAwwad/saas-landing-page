@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="js/index.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
     <!------------------ REMIX ICON ------------------>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
@@ -46,15 +45,15 @@
             class="flex flex-col md:flex-row items-center gap-8 md:gap-4 text-lg font-medium"
           >
             <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Testimonials</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
+            <li><a href="#about-us">About us</a></li>
           </ul>
         </div>
         <div class="flex items-center md:static">
           <a
             href="./pages/sign-in.html"
-            class="button-style font-bold py-2 px-5 rounded items-center ease-in h-fit duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110 cursor-pointer"
+            class="button-style font-bold py-2 px-5 rounded items-center h-fit duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110 cursor-pointer"
           >
             Sign in
           </a>
@@ -82,9 +81,8 @@
               <span class="habisure">Habisure!</span>
             </h1>
             <p class="font-medium text-base py-3 mb-4">
-              Our mission is clear: to save you time and money. With competitive
-              rates and a secure platform, you can manage your finances
-              hassle-free, anytime, anywhere.
+              Habi Sure offers a comprehensive range of bill payment options to
+              meet your everyday needs. Here's a glimpse of what we offer.
             </p>
             <button
               class="button-style font-bold py-3 px-6 rounded inline-flex items-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
@@ -96,23 +94,24 @@
         </div>
       </section>
 
-      <!------------------ Features Section ------------------>
-      <section class="my-32 pt-6 pb-7">
+      <!------------------ Services Section ------------------>
+      <section id="services" class="my-32 pt-6 pb-7">
         <div class="w-full mx-auto px-4">
           <div class="sm:max-w-lg mx-auto mb-28">
             <div class="mx-auto text-center">
               <h2 class="text-4xl font-extrabold mb-6">
-                <span class="habisure">Habisure</span> offers everything you
-                need.
+                <span class="habisure">Habisure</span> offers everything you -
+                need
               </h2>
               <p class="font-medium text-base mb-6">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-                voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
+                Our platform offers a range of services that make it easy for
+                you to manage your payments, from invoicing to payment
+                processing.
               </p>
             </div>
           </div>
           <div
-            class="features-container mt-5 sm:max-w-lg md:max-w-5xl mx-auto text-center mx-auto grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 mb-28"
+            class="features-container mt-5 sm:max-w-lg md:max-w-5xl text-center mx-auto grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 mb-28"
           >
             <div class="feature-container rounded-2xl p-12">
               <div class="features p-5 w-fit mx-auto mb-4">
@@ -266,8 +265,128 @@
         </div>
       </section>
 
+      <!------------------ Pricing ------------------>
+
+      <section class="pricing my-20">
+        <div class="pricing__heading text-center mx-auto">
+          <h2 class="text-4xl font-extrabold mb-6">
+            <span class="habisure">Choose</span> Your Data Plan
+          </h2>
+          <p class="font-medium text-base mb-6">
+            Choose the plan that suits your network provider and data
+            subscription
+          </p>
+        </div>
+        <div
+          class="pricing__container sm:max-w-xl md:max-w-5xl mx-auto grid grid-cols-1 gap-6 md:grid-cols-3 py-14"
+        >
+          <div
+            class="pricing__container__item rounded-xl feature-container shadow-lg mx-4 text-center"
+          >
+            <div class="p-10">
+              <h3
+                class="text-4xl habisure font-semibold tracking-wide pt-3 mb-2"
+              >
+                Airtel
+              </h3>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;1,400</h4>
+              <p class="text-sm text-gray-400 mt-2">For 500mb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;2,100</h4>
+              <p class="text-sm text-gray-400 mt-2">For 1gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;2,800</h4>
+              <p class="text-sm text-gray-400 mt-2">For 2gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;3,500</h4>
+              <p class="text-sm text-gray-400 mt-2">For 5gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;6,000</h4>
+              <p class="text-sm text-gray-400 mt-2">For 10gb</p>
+              <button
+                class="button-style font-semibold py-2 rounded inline-flex items-center justify-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110 mt-6 mb-4 px-8"
+              >
+                TRY NOW
+              </button>
+            </div>
+          </div>
+          <div
+            class="pricing__container__item rounded-xl feature-container shadow-lg mx-4 text-center"
+          >
+            <div class="p-10">
+              <h3
+                class="text-4xl habisure font-semibold tracking-wide pt-3 mb-2"
+              >
+                Glo
+              </h3>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;2,250</h4>
+              <p class="text-sm text-gray-400 mt-2">For 500mb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;3,125</h4>
+              <p class="text-sm text-gray-400 mt-2">For 1gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;4,125</h4>
+              <p class="text-sm text-gray-400 mt-2">For 2gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;5,000</h4>
+              <p class="text-sm text-gray-400 mt-2">For 5gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;7,500</h4>
+              <p class="text-sm text-gray-400 mt-2">For 10gb</p>
+              <button
+                class="button-style font-semibold py-2 rounded inline-flex items-center justify-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110 mt-6 mb-4 px-8"
+              >
+                TRY NOW
+              </button>
+            </div>
+          </div>
+          <div
+            class="pricing__container__item rounded-xl feature-container shadow-lg mx-4 text-center"
+          >
+            <div class="p-10">
+              <h3
+                class="text-4xl font-semibold tracking-wide pt-3 mb-2 habisure"
+              >
+                9mobile
+              </h3>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;2,100</h4>
+              <p class="text-sm text-gray-400 mt-2">For 500mb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;2,800</h4>
+              <p class="text-sm text-gray-400 mt-2">For 1gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;3,500</h4>
+              <p class="text-sm text-gray-400 mt-2">For 2gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;4,600</h4>
+              <p class="text-sm text-gray-400 mt-2">For 5gb</p>
+              <h4 class="text-xl pt-4 font-semibold">&#8358;6,100</h4>
+              <p class="text-sm text-gray-400 mt-2">For 10gb</p>
+              <button
+                class="button-style font-semibold py-2 rounded inline-flex items-center justify-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110 mt-6 mb-4 px-8"
+              >
+                TRY NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!------------------ ABOUT US ------------------>
+
+      <section id="about-us" class="my-32 third__color">
+        <div
+          class="about__us__container sm:max-w-xl md:max-w-5xl mx-auto flex flex-col items-center py-14"
+        >
+          <h2 class="text-4xl font-extrabold mb-6 text-white">About Us</h2>
+          <p class="font-medium text-xl py-3 px-6 mb-6 text-gray-400">
+            We are a platform that aims to make managing your finances easier,
+            more efficient, and more accessible. With our app, you can access
+            your accounts on the go, track your spending, and get notified when
+            you exceed your limits.
+          </p>
+          <a
+            href="#"
+            class="button-style font-bold py-3 px-6 rounded inline-flex items-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
+          >
+            <span>Learn More</span>
+            <i class="ri-arrow-right-line text-xl ml-2"></i>
+          </a>
+        </div>
+      </section>
+
       <!------------------ FAQ ------------------>
       <section
+        id="FAQ"
         class="sm:max-w-xl md:max-w-5xl mx-auto flex flex-col items-center mb-20 px-4"
       >
         <div class="text-center w-fit mx-auto my-4 mb-16">
@@ -281,59 +400,78 @@
         <div class="faq__container">
           <div class="faq cursor-pointer mt-0.5 py-5">
             <div class="question flex justify-between items-center">
-              <h4 class="text-lg font-semibold">What is Habisure ?</h4>
+              <h4 class="text-lg font-semibold">
+                What bills can I pay with Habisure?
+              </h4>
               <i class="ri-arrow-down-s-line text-md font-semibold mt-0.5"></i>
             </div>
             <div class="answer">
               <p class="text-base font-medium mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-                nobis commodi quo, nisi culpa et ab vel delre
+                You can pay for a variety of bills with Habi Sure, including:
+                Mobile Top-Up & Data Recharge, Electricity Bills, Cable TV
+                Subscriptions, Educational Payments, And More!
               </p>
             </div>
           </div>
 
           <div class="faq cursor-pointer mt-0.5 py-5">
             <div class="question flex justify-between items-center">
-              <h4 class="text-lg font-semibold">Why should I use Habisure ?</h4>
+              <h4 class="text-lg font-semibold">Is Habi Sure secure?</h4>
               <i class="ri-arrow-down-s-line text-md font-semibold mt-0.5"></i>
             </div>
             <div class="answer">
               <p class="text-base font-md mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-                nobis commodi quo, nisi culpa et ab vel delre
+                Absolutely! We utilize secure systems to safeguard your
+                financial information. Your peace of mind is our top priority.
               </p>
             </div>
           </div>
 
           <div class="faq cursor-pointer mt-0.5 py-5">
             <div class="question flex justify-between items-center">
-              <h4 class="text-lg font-semibold">How does Habisure work ?</h4>
+              <h4 class="text-lg font-semibold">
+                Do I need to download an app or create an account to use Habi
+                Sure? ?
+              </h4>
               <i
                 class="ri-arrow-down-s-line text-base font-semibold mt-0.5"
               ></i>
             </div>
             <div class="answer">
               <p class="text-base font-md mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-                nobis commodi quo, nisi culpa et ab vel delre
+                No! Habi Sure is designed for ultimate convenience. Simply
+                access our platform and pay your bills without any downloads.
               </p>
             </div>
           </div>
 
           <div class="faq cursor-pointer mt-0.5 py-5">
             <div class="question flex justify-between items-center">
-              <h4 class="text-lg font-semibold">What are Habisures goals ?</h4>
+              <h4 class="text-lg font-semibold">
+                How do I get started with Habi Sure?
+              </h4>
               <i
                 class="ri-arrow-down-s-line text-base font-semibold mt-0.5"
               ></i>
             </div>
             <div class="answer">
               <p class="text-base font-md mt-5">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-                nobis commodi quo, nisi culpa et ab vel delre
+                Getting started is easy! Just click the "Get Started" button on
+                our homepage and follow the simple instructions.
               </p>
             </div>
           </div>
+        </div>
+
+        <div class="mt-10 md:mt-20 text-center">
+          <h3 class="mb-5 font-semibold text-2xl">Have Questions?</h3>
+          <a
+            href="#"
+            class="button-style font-bold py-3 px-6 rounded inline-flex items-center duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110"
+          >
+            <span>CONTACT US</span>
+            <i class="ri-arrow-right-line text-xl ml-2"></i>
+          </a>
         </div>
       </section>
 
@@ -344,14 +482,16 @@
         >
           <div class="py-12 px-4 lg:py-20">
             <h2 class="text-4xl text-white font-extrabold text-center mb-5">
-              Stay up to date
+              Get notified of future updates!
             </h2>
             <p
               class="text-center text-base text-gray-400 font-medium mb-6 max-w-3xl mx-auto"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-              voluptate, quae voluptates, quia quibusdam voluptatibus, quidem
+              Put your email below to stay up to date on future releases and new
+              features of Habisure. We'll keep you in the loop on what's to
+              come!
             </p>
+
             <form
               action="#"
               class="flex flex-col md:flex-row md:justify-center w-full md:max-w-md md:mx-auto"
@@ -396,12 +536,12 @@
             <li
               class="ml-4 hover:text-[#f50057] transition duration-200 ease-in-out transform hover:scale-110"
             >
-              <a href="">Features</a>
+              <a href="">About Us</a>
             </li>
             <li
               class="ml-4 hover:text-[#f50057] transition duration-200 ease-in-out transform hover:scale-110"
             >
-              <a href="">FAQ</a>
+              <a href="">Terms and Conditions</a>
             </li>
             <li
               class="ml-4 hover:text-[#f50057] transition duration-200 ease-in-out transform hover:scale-110"
