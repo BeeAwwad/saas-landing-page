@@ -165,6 +165,8 @@ body {
   }
 }
 
+/* image blur */
+
 .blur__div::before {
   content: "";
   position: absolute;

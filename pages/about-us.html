@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../js/about.js"></script>
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <!------------------ REMIX ICON ------------------>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!------------------ GOOGLE FONTS ------------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Sign in page</title>
+  </head>
+  <body class="bg-white">
+    <header
+      class="header sticky navbar top-0 w-full z-50 transition duration-500 ease-in-out transform translate-y-0 bg-white shadow-md"
+      id="header"
+    >
+      <nav class="flex items-center justify-between w-11/12 mx-auto py-3">
+        <div class="flex items-center">
+          <img
+            class="w-7 cursor-pointer"
+            src="../public/svg/navigation/logo.svg"
+            alt="logo"
+          /><a
+            href="../index.html"
+            class="ml-3 text-xl font-semibold cursor-pointer habisure"
+            >Habisure</a
+          >
+        </div>
+
+        <a
+          href="./sign-up.html"
+          class="button-style font-bold py-2 px-5 rounded items-center h-fit duration-200 ease-in-out hover:bg-white hover:text-black hover:border-black transform hover:scale-110 cursor-pointer"
+        >
+          Sign up
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="pt-8 px-4 my-16 mx-auto sm:max-w-lg md:max-w-4xl lg:max-w-5xl"
+      >
+        <div class="mx-auto text-center">
+          <h2
+            class="text-4xl lg:text-5xl font-extrabold mb-6 md:mb-8 lg:mb-10 sm:tracking-tight"
+          >
+            About Habisure
+          </h2>
+        </div>
+        <div class="md:grid md:grid-rows-auto md:grid-cols-auto">
+          <div
+            class="h-[27rem] md:col-span-2 blur__div blur__two rounded-3xl overflow-hidden mb-10 md:mb-12 lg:mb-16"
+          >
+            <img
+              class="object-cover object-center h-full w-full"
+              src="../public/images/features/image-two.png"
+              alt="Picture of a happy man"
+            />
+          </div>
+
+          <div
+            class="md:flex md:items-center md:justify-between md:col-span-2 md:flex-row md:space-x-12"
+          >
+            <div class="md:w-1/2 p-8 space-y-4">
+              <h4 class="text-xl font-bold habisure">Our Mission</h4>
+              <h3 class="text-3xl font-semibold">
+                Eliminating the need for hassle and making bill payments
+                convenient.
+              </h3>
+              <p class="text-gray-600">
+                Habi Sure is your one-stop solution for managing all your bills,
+                conveniently and securely. We understand the hassle of juggling
+                multiple apps and websites for different bill payments. That's
+                why we created a streamlined system that eliminates the need for
+                downloads or online accounts. We are passionate about empowering
+                our users to take control of their finances. Habi Sure strives
+                to make bill payments accessible and efficient for everyone.
+              </p>
+            </div>
+
+            <div
+              class="md:w-1/2 blur__div blur__one rounded-3xl overflow-hidden h-[27rem] md:h-full"
+            >
+              <img
+                class="object-cover object-center h-full w-full"
+                src="../public/images/features/image-one.png"
+                alt="lady says Welcome Back"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

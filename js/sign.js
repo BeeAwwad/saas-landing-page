@@ -1,7 +1,6 @@
 // Show Password and Icon
 
 const eyeIcon = document.querySelector("#eye-icon")
-console.log("🚀 ~ eyeIcon:", eyeIcon)
 const password = document.querySelector("#password")
 
 eyeIcon.onclick = () => {
