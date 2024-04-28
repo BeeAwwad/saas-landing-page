@@ -366,6 +366,7 @@ body {
   padding: 22px 20px;
   width: 350px;
   min-width: 350px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
 }
 
 /* Scroller testimonials styles */
@@ -385,7 +386,7 @@ body {
 .scroller[data-animated="true"] .scroller__inner {
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes scroll {

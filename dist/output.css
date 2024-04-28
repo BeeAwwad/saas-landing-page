@@ -806,6 +806,11 @@ video {
   margin-bottom: auto;
 }
 
+.my-24 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -3397,6 +3402,7 @@ body {
   padding: 22px 20px;
   width: 350px;
   min-width: 350px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.06);
 }
 
 /* Scroller testimonials styles */
@@ -3417,7 +3423,7 @@ body {
   width: -moz-max-content;
   width: max-content;
   flex-wrap: nowrap;
-  animation: scroll 20s linear infinite;
+  animation: scroll 40s linear infinite;
 }
 
 @keyframes scroll {
